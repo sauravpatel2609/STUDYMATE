@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* StudyMate Design System - Modern, Clean, Professional */
+
+@layer base {
+  :root {
+    /* Core brand colors - Teal/Cyan accent */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 173 58% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 173 58% 94%;
+    --accent-foreground: 173 58% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 173 58% 39%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(173 58% 39%), hsl(199 89% 48%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(210 20% 96%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(0 0% 100% / 0.9), hsla(0 0% 100% / 0.7));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsla(222 47% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsla(222 47% 11% / 0.1), 0 2px 4px -2px hsla(222 47% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsla(222 47% 11% / 0.1), 0 4px 6px -4px hsla(222 47% 11% / 0.1);
+    --shadow-glow: 0 0 20px hsla(173 58% 39% / 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 173 58% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 173 58% 94%;
+    --sidebar-accent-foreground: 173 58% 25%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 173 58% 39%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 173 58% 45%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 173 58% 15%;
+    --accent-foreground: 173 58% 75%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 173 58% 45%;
+
+    --success: 142 71% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 40%;
+    --warning-foreground: 0 0% 100%;
+
+    --gradient-brand: linear-gradient(135deg, hsl(173 58% 45%), hsl(199 89% 48%));
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 8%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(222 47% 11% / 0.8), hsla(222 47% 11% / 0.6));
+
+    --shadow-sm: 0 1px 2px 0 hsla(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 6px -1px hsla(0 0% 0% / 0.3), 0 2px 4px -2px hsla(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsla(0 0% 0% / 0.4), 0 4px 6px -4px hsla(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsla(173 58% 45% / 0.4);
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 173 58% 45%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 173 58% 15%;
+    --sidebar-accent-foreground: 173 58% 75%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 173 58% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  code, pre, .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+    box-shadow: var(--shadow-md);
+  }
+
+  .glass-card-elevated {
+    @apply bg-card/90 backdrop-blur-2xl border border-border/30;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .gradient-text {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .chat-bubble-user {
+    @apply bg-primary text-primary-foreground rounded-2xl rounded-br-md;
+  }
+
+  .chat-bubble-ai {
+    @apply bg-secondary text-secondary-foreground rounded-2xl rounded-bl-md;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}

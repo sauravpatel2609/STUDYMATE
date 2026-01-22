@@ -26,6 +26,12 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+allowed_origins = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://study.vercel.app",
+]
+
 # CORS middleware (allows frontend to call API)
 app.add_middleware(
     CORSMiddleware,
