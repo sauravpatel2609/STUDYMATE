@@ -1,4 +1,4 @@
-# StudyMate - AI-Powered Study Assistant
+# StudyMate - AI-Powered Study Assistant 
 
 StudyMate is an intelligent study companion that leverages RAG (Retrieval-Augmented Generation) and AI to help you learn more effectively. Upload your study materials, ask questions, and get accurate answers based on your documents.
 
